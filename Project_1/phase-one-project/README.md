@@ -1,147 +1,60 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "<font size=6>__Making A Debut: EDA for the Movie Industry__</font>{-}\n",
-    "<hr style=\"border:1.5px solid gray\"> </hr>\n",
-    "\n",
-    "\n",
-    "<font size=4>__Author__: Matthew Noonan</font>\n",
-    "\n",
-    "\n",
-    "<font size=5>__Overview__</font>\n",
-    "<hr style=\"border:1.5px solid gray\"> </hr>\n",
-    "\n",
-    "<font size=4>Microsoft Studios, a newly formed division of Microsoft, is looking to make its \n",
-    "    movie production debut. To that end, it wants to know what movies typically perform well.\n",
-    "    We arrive at three recommendations for its movie-making debut by analyzing various \n",
-    "    movie information databases using pandas and visualizations. Our recommendations were \n",
-    "    drawn from the results of budget and genre data.\n",
-    "    \n",
-    "\n",
-    "<font size=5>__Business Problem__</font>\n",
-    "<hr style=\"border:1.5px solid gray\"> </hr>We asked:<br>\n",
-    "\n",
-    "     - How are film budget and worldwide gross related?\n",
-    "     \n",
-    "     - Do different genres have different profitability ratios?\n",
-    "     \n",
-    "     - Which genres have the highest average grosses?\n",
-    "\n",
-    "<font size=5>__Data__</font>\n",
-    "<hr style=\"border:1.5px solid gray\"> </hr>The data comes from several\n",
-    "online information databases (IMDB, TheNumbers, and BoxOfficeMojo).\n",
-    "Each row contains information about individual films, each source with\n",
-    "different features. We chose these data sources for ease of use, variety\n",
-    "of data, and size.\n",
-    "\n",
-    "<font size=5>__Methods__</font>\n",
-    "<hr style=\"border:1.5px solid gray\"> </hr>The data was prepared and cleaned\n",
-    "of NaN's and non-sensical entries; some features were dropped entirely, and \n",
-    "other features created. \n",
-    "\n",
-    "\n",
-    "<font size=5>__Results__</font>\n",
-    "<hr style=\"border:1.5px solid gray\"> </hr>We found that budget and worldwide\n",
-    "gross were tightly correlated. (Image of scatter plot)\n",
-    "\n",
-    "That profitability was higher with some genres (Image of plot)\n",
-    "\n",
-    "That several genres were distinct money-makers (Image of barplot)\n",
-    "\n",
-    "Recommendations:\n",
-    "\n",
-    "     - with respect to budget, choosing moderate budget yields higher returns\n",
-    "     - Action, adventure, animation, and scifi were most profitable\n",
-    "     - Fittingly, these same genres had higher grosses than other genres\n",
-    "\n",
-    "<font size=5>__For More Information__</font>\n",
-    "<hr style=\"border:1.5px solid gray\"> </hr>For further analysis, please see our\n",
-    "full [jupyter notebook](./Untitled1.ipynb)\n",
-    "\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "datacleaner": {
-   "position": {
-    "top": "50px"
-   },
-   "python": {
-    "varRefreshCmd": "try:\n    print(_datacleaner.dataframe_metadata())\nexcept:\n    print([])"
-   },
-   "window_display": false
-  },
-  "kernelspec": {
-   "display_name": "Python (learn-env)",
-   "language": "python",
-   "name": "learn-env"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.8.5"
-  },
-  "toc": {
-   "base_numbering": 1,
-   "nav_menu": {},
-   "number_sections": true,
-   "sideBar": true,
-   "skip_h1_title": false,
-   "title_cell": "Table of Contents",
-   "title_sidebar": "Contents",
-   "toc_cell": false,
-   "toc_position": {},
-   "toc_section_display": true,
-   "toc_window_display": false
-  },
-  "varInspector": {
-   "cols": {
-    "lenName": 16,
-    "lenType": 16,
-    "lenVar": 40
-   },
-   "kernels_config": {
-    "python": {
-     "delete_cmd_postfix": "",
-     "delete_cmd_prefix": "del ",
-     "library": "var_list.py",
-     "varRefreshCmd": "print(var_dic_list())"
-    },
-    "r": {
-     "delete_cmd_postfix": ") ",
-     "delete_cmd_prefix": "rm(",
-     "library": "var_list.r",
-     "varRefreshCmd": "cat(var_dic_list()) "
-    }
-   },
-   "types_to_exclude": [
-    "module",
-    "function",
-    "builtin_function_or_method",
-    "instance",
-    "_Feature"
-   ],
-   "window_display": false
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 4
-}
+<hr style="border:1.5px solid gray"> </hr>
+
+
+<font size=4>__Author__: Matthew Noonan</font>
+
+
+<font size=5>__Overview__</font>
+<hr style="border:1.5px solid gray"> </hr>
+
+<font size=4>Microsoft Studios, a newly formed division of Microsoft, is looking to make its 
+    movie production debut. To that end, it wants to know what movies typically perform well.
+    We arrive at three recommendations for its movie-making debut by analyzing various 
+    movie information databases using pandas and visualizations. Our recommendations were 
+    drawn from the results of budget and genre data.
+    
+
+<font size=5>__Business Problem__</font>
+<hr style="border:1.5px solid gray"> </hr>We asked:<br>
+
+     - How are film budget and worldwide gross related?
+     
+     - Do different genres have different profitability ratios?
+     
+     - Which genres have the highest average grosses?
+
+<font size=5>__Data__</font>
+<hr style="border:1.5px solid gray"> </hr>The data comes from several
+online information databases (IMDB, TheNumbers, and BoxOfficeMojo).
+Each row contains information about individual films, each source with
+different features. We chose these data sources for ease of use, variety
+of data, and size.
+
+<font size=5>__Methods__</font>
+<hr style="border:1.5px solid gray"> </hr>The data was prepared and cleaned
+of NaN's and non-sensical entries; some features were dropped entirely, and 
+other features created. 
+
+
+<font size=5>__Results__</font>
+<hr style="border:1.5px solid gray"> </hr>We found that budget and worldwide
+gross were tightly correlated.<img src="https://github.com/mcn9284/Phase-1-Project-b/blob/main/Project_1/phase-one-project/Images/budgetvsgross.png?raw=true">
+
+
+That profitability was higher with some genres 
+<img src="https://github.com/mcn9284/Phase-1-Project-b/blob/main/Project_1/phase-one-project/Images/profitabilityvsgenre.png?raw=true">
+
+That ratings and gross were not tightly coupled.
+<img src="https://github.com/mcn9284/Phase-1-Project-b/blob/main/Project_1/phase-one-project/Images/ratingsvsgross.png?raw=true">
+
+Recommendations:
+
+     - with respect to budget, choosing moderate budget yields higher returns
+     - Action, adventure, animation, and scifi were most profitable
+     - Fittingly, these same genres had higher grosses than other genres
+
+<font size=5>__For More Information__</font>
+<hr style="border:1.5px solid gray"> </hr>For further analysis, please see our
+full [jupyter notebook](./Untitled1.ipynb)
+
+
